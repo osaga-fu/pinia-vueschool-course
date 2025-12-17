@@ -7,8 +7,9 @@ export const useProductStore = defineStore("ProductStore", {
       products: [],
     };
   },
-  // actions
+  // getters
 
+  // actions
   actions: {
     async fill() {
       this.products = (await import("@/data/products.json")).default;
@@ -16,5 +17,4 @@ export const useProductStore = defineStore("ProductStore", {
       // this.products = (await axios.get('some/end/point')).data;
     },
   },
-  // getters
 });
